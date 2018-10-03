@@ -67,6 +67,7 @@ print(str_labels)
 
 pos = (62.5, 23.1, 82.3)
 
+
 # Accessing elements of a tuple inside the format function
 p = "Galactic position x={pos[0]} y={pos[1]} z={pos[2]}".format(pos=pos)
 print(p)
