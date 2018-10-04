@@ -79,3 +79,21 @@ for fruit, count in basket_items.items():
     else:
         non_fruit_count += count
 print("The number of fruits in the fruits list is {}. The number of fruits not in the fruits list is {}.".format(fruit_count, non_fruit_count))
+
+
+# task
+cast_names = ["Barney", "Robin", "Ted", "Lily", "Marshall"]
+cast_heights = [72, 68, 72, 66, 76]
+
+cast = {}
+for cast_name, height in zip(cast_names, cast_heights):
+    cast[cast_name] = height
+
+print(cast)
+
+# More efficient method
+cast_names = ["Barney", "Robin", "Ted", "Lily", "Marshall"]
+cast_heights = [72, 68, 72, 66, 76]
+
+cast = dict(zip(cast_names, cast_heights))
+print(cast)
