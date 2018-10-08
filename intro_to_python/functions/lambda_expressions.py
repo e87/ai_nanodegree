@@ -38,8 +38,15 @@ numbers = [
 def mean(num_list):
     return sum(num_list) / len(num_list)
 
-mean = lambda num_list: sum(num_list) / len(num_list)
+# using a lambda
+
+
+mean2 = lambda num_list: sum(num_list) / len(num_list)
 
 averages = list(map(mean, numbers))
+
+averages2 = list(map(mean2, numbers))
+
 print(averages)
+print(averages2)
 
