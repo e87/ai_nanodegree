@@ -1,5 +1,5 @@
-names =  input("Enter a list of names: ").split(",")
-assignments =  input("Enter the list of assignments ").split(",")
+names = input("Enter a list of names: ").split(",")
+assignments = input("Enter the list of assignments ").split(",")
 grades = input("Enter a list of grades ").split(",")
 
 # message string to be used for each student
