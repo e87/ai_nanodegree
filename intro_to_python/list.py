@@ -3,7 +3,7 @@ from typing import List
 my_list = [1, 2, 3]  # type: List[int]
 
 if my_list:
-    print('non-empty')
+    print('list is not empty')
 
 else:
     print('empty')

@@ -16,7 +16,6 @@ for word in book_title:
 
 print(word_counter)
 
-
 # Method two: use the dictionary get function instead.
 
 word_counter_2 = {}  # type: Dict[Union[str, Any], Union[int, Any]]
@@ -30,11 +29,11 @@ print("_" * 15 + "End of Word Counter" + "_" * 15 + "\n")
 # Iterate through both key, value pair on a dictionary
 
 cast = {
-           "Jerry Seinfeld": "Jerry Seinfeld",
-           "Julia Louis-Dreyfus": "Elaine Benes",
-           "Jason Alexander": "George Costanza",
-           "Michael Richards": "Cosmo Kramer"
-       }
+    "Jerry Seinfeld": "Jerry Seinfeld",
+    "Julia Louis-Dreyfus": "Elaine Benes",
+    "Jason Alexander": "George Costanza",
+    "Michael Richards": "Cosmo Kramer"
+}
 
 print("\nKeys in the cast dictionary")
 for key in cast:
@@ -78,8 +77,8 @@ for fruit, count in basket_items.items():
         fruit_count += count
     else:
         non_fruit_count += count
-print("The number of fruits in the fruits list is {}. The number of fruits not in the fruits list is {}.".format(fruit_count, non_fruit_count))
-
+print("The number of fruits in the fruits list is {}. The number of fruits not in the fruits list is {}.".format(
+    fruit_count, non_fruit_count))
 
 # task
 cast_names = ["Barney", "Robin", "Ted", "Lily", "Marshall"]
@@ -97,4 +96,3 @@ cast_heights = [72, 68, 72, 66, 76]
 
 cast = dict(zip(cast_names, cast_heights))
 print(cast)
-
