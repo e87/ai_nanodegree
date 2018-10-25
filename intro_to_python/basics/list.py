@@ -25,3 +25,9 @@ for item in list_of_months_abbreviation:
     print(str(list_of_months_abbreviation.index(item) + 1) + "-" + item)
 
 
+my_list = "boston".split(" ")
+print(my_list)
+if 'Terrier' in my_list:
+    print("terrier is in the list")
+else:
+    print('No Terrier')

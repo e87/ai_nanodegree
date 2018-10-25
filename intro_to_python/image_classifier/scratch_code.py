@@ -57,8 +57,8 @@ def get_pet_labels(image_dir):
             #          that's created as an empty string ABOVE
 
             pet_label = in_files[idx].split('.')[0]
+            pet_label = ''.join([i for i in pet_label if not i.isdigit()]).replace("_", " ").strip()
             print(pet_label)
-            pass
 
             # If filename doesn't already exist in dictionary add it and it's
             # pet label - otherwise print an error message because indicates
@@ -75,5 +75,10 @@ def get_pet_labels(image_dir):
     return petlabels_dic
 
 
-for key, value in get_pet_labels('C:\\Users\\jsanchez\\PycharmProjects\\ai_nanodegree\\intro_to_python\\pet_images').items():
+for key, value in get_pet_labels('D:\\GitHub\\intro_to_python\\pet_images').items():
     print("File: {} ------- Label: {}".format(key, value))
+
+
+s = 'Saint_bernard_08010'
+result = ''.join([i for i in s if not i.isdigit()]).replace("_", " ")
+print(result)

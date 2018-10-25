@@ -82,3 +82,7 @@ names = ["Rick Sanchez", "Morty Smith", "Summer Smith", "Jerry Smith", "Beth Smi
 
 first_names = [name.lower().split()[0] for name in names]
 print(first_names)
+
+# Find method
+s = 'Tomorrow I am taking an exam'
+print(s.find('taking an exam'))
