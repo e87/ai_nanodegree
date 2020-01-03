@@ -1,6 +1,35 @@
-# Word Counter
 from typing import Dict, Any, Union
 
+
+# Dictionary : A mutable data structure for storing mappings of unique keys to values
+# Dictionaries store pair of values
+# You retrieve the value of a key by calling the dictionary with the key between square brackets
+# Dictionaries can store objects of different data types. Example, strings, numbers and complex objects
+
+elements = {'hydrogen': 1, 'helium': 2}
+print(elements)
+print('The hydrogen element is {}'.format(elements['hydrogen']))
+
+# Add elements to a dictionary. Note that it is a good practice to check if the element exist.
+elements['lithium'] = 3
+print(elements)
+
+# Dictionaries support the in operator
+print("Is carbon in elemtns? {}".format('carbon' in elements))
+
+# The get method returns the element of a dictionary. It returns None or a custom value if the element is not in the
+# dictionary. This is a very useful function when working with dictionaries.
+# This will help when trying to retrieve a value for which the key is not in a dictionary.
+# Unless you use get, you will get a KeyError exception raised
+print("Get method with default and custom values")
+print(elements.get('carbon'))
+print(elements.get('carbon', -1))
+
+# Identity operators (in and is not) evaluate if both sides have the same identity. They are different from the
+# = and != operators.
+
+
+# Word Counter
 book_title = ['great', 'expectations', 'the', 'adventures', 'of', 'sherlock', 'holmes', 'the', 'great', 'gasby',
               'hamlet', 'adventures', 'of', 'huckleberry', 'fin']
 
@@ -71,7 +100,7 @@ print(result)
 # Task 2
 # Count the words in the list into the fruit_count and the words not in the list in the non_fruit_count
 fruit_count, non_fruit_count = 0, 0
-
+print('Count the words in the list into the fruit_count and the words not in the list in the non_fruit_count')
 for fruit, count in basket_items.items():
     if fruit in fruits:
         fruit_count += count
@@ -87,12 +116,14 @@ cast_heights = [72, 68, 72, 66, 76]
 cast = {}
 for cast_name, height in zip(cast_names, cast_heights):
     cast[cast_name] = height
-
+print('Example with for loop and two variables using the zip function')
 print(cast)
 
 # More efficient method
 cast_names = ["Barney", "Robin", "Ted", "Lily", "Marshall"]
 cast_heights = [72, 68, 72, 66, 76]
-
+print('Efficient Method with dict(zip(list1,list2))')
 cast = dict(zip(cast_names, cast_heights))
 print(cast)
+
+
