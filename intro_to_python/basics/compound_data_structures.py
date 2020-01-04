@@ -14,3 +14,4 @@ print(elements.get('helium'))
 # to print information from the nested dictionary, do the following
 print(elements['hydrogen']['symbol'])
 print(elements.get('hydrogen')['symbol'])
+
