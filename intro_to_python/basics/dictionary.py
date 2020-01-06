@@ -47,7 +47,7 @@ print(word_counter)
 
 # Method two: use the dictionary get function instead.
 
-word_counter_2 = {}  # type: Dict[Union[str, Any], Union[int, Any]]
+word_counter_2 = {}
 
 for word in book_title:
     word_counter_2[word] = word_counter_2.get(word, 0) + 1  # Add the word or increments the counter
@@ -126,4 +126,19 @@ print('Efficient Method with dict(zip(list1,list2))')
 cast = dict(zip(cast_names, cast_heights))
 print(cast)
 
+# Iterate through Dictionaries
 
+cast = {
+           "Jerry Seinfeld": "Jerry Seinfeld",
+           "Julia Louis-Dreyfus": "Elaine Benes",
+           "Jason Alexander": "George Costanza",
+           "Michael Richards": "Cosmo Kramer"
+       }
+
+# iterate through the keys
+for key in cast:
+    print(key)
+
+# iterate through keys and values:
+for key, value in cast.items():
+    print("Key: {}     Value: {}".format(key, value))

@@ -36,11 +36,13 @@ print(squares)
 
 
 # Multiple of 3
-multiples_3 = [3 * number for number in range(1, 20+1)]
+print("Multiple of 3:")
+multiples_3 = [3 * number for number in range(1, 21)]
 print(multiples_3)
 
 
 # Working with dictionaries
+print("Filter names by score:")
 scores = {
              "Rick Sanchez": 70,
              "Morty Smith": 35,
@@ -53,5 +55,12 @@ passed = [passed_name for passed_name in scores if scores[passed_name] >= 65]
 print(passed)
 
 # Using the items() to get both the name and score in the dictionary
+
 passed = [name for name, score in scores.items() if score >= 65]
 print(passed)
+
+# Extract names
+names = ["Rick Sanchez", "Morty Smith", "Summer Smith", "Jerry Smith", "Beth Smith"]
+
+first_names = [name.split()[0].lower() for name in names]
+print(first_names)
