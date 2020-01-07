@@ -78,6 +78,12 @@ def my_enumerate(iterable, start=0):
         count += 1
 
 
+lessons = ["Why Python Programming", "Data Types and Operators", "Control Flow", "Functions", "Scripting"]
+
+for i, lesson in my_enumerate(lessons, 1):
+    print("Lesson {}: {}".format(i, lesson))
+
+
 # Example of list comprehension and generators. Note that one uses "[]" while the other uses "()"
 
 sq_list = [x**2 for x in range(10)]

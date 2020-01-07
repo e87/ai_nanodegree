@@ -26,17 +26,24 @@ numbers = [
               [51, 22, 34, 11, 18]
            ]
 
+
 # using a function
 def mean(num_list):
     return sum(num_list) / len(num_list)
 
-# using a lambda
-mean2 = lambda num_list: sum(num_list) / len(num_list)
 
 averages = list(map(mean, numbers))
-
-averages2 = list(map(mean2, numbers))
-
 print(averages)
-print(averages2)
 
+
+# using a lambda
+# Map() is a higher-order built-in function that takes a function and iterable as inputs, and returns an iterator that applies the function to each element of the iterable
+averages = list(map(lambda x: sum(x) / len(x), numbers))
+print(averages)
+
+# Lambda example with filter
+# Filter()  is a higher-order built-in function that takes a function and iterable as inputs and returns an iterator with the elements from the iterable for which the function returns True
+cities = ["New York City", "Los Angeles", "Chicago", "Mountain View", "Denver", "Boston"]
+
+short_cities = list(filter(lambda x: len(x) < 10, cities))
+print(short_cities)

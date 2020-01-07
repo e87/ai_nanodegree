@@ -8,7 +8,7 @@ print("Your name is {}".format(name))
 number = int(float(int(input("Please enter a number: "))))
 print("Hello " * number)
 
-# Using Eval. It allows user to enter python expresions as inputself.
+# Using Eval. It allows user to enter python expressions as input themselves.
 
 result = eval(input("Enter an expresion for me: "))
 print(result)
