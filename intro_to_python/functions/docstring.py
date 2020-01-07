@@ -11,3 +11,5 @@ def population_density(population, land_area):
     population_density: population/land_area. The population density of an area.
     """
     return population / land_area
+
+print(population_density(1000, 24))
