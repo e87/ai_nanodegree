@@ -1,6 +1,7 @@
 import math
 import matplotlib.pyplot as plt
 
+
 class Gaussian():
     """ Gaussian distribution class for calculating and 
     visualizing a Gaussian distribution.
@@ -17,10 +18,7 @@ class Gaussian():
         self.stdev = sigma
         self.data = []
 
-
-    
     def calculate_mean(self):
-    
         """Method to calculate the mean of the data set.
         
         Args: 
@@ -44,9 +42,6 @@ class Gaussian():
         
         return self.mean
             
-                
-
-
     def calculate_stdev(self, sample=True):
 
         """Method to calculate the standard deviation of the data set.
@@ -119,14 +114,13 @@ class Gaussian():
         self.calculate_mean()
         self.calculate_stdev(sample)
                 
-        
     def plot_histogram(self):
         """Method to output a histogram of the instance variable data using 
         matplotlib pyplot library.
         
         Args:
             None
-            
+
         Returns:
             None
         """
@@ -208,33 +202,33 @@ class Gaussian():
 
         return x, y
 
-# Magic methods allows you to override some of the default operations in python.
-def __add__(self,other):
-    """Function to add together two Gaussian distributions.
+    # Magic methods allows you to override some of the default operations in python.
+    def __add__(self,other):
+        """Function to add together two Gaussian distributions.
 
-    Args:
-        other (Gaussian): Gaussian Instance
+        Args:
+            other (Gaussian): Gaussian Instance
+
+        Returns:
+            Gaussian: Gaussian distributions
+
+        """
+
+        result = Gaussian()
+        result.mean = self.mean + other.mean
+        result.stdev = math.sqrt(self.stdev **2 + other.stdev **2)
+
+        return result
+
+    def __repr__(self):
+        """Function to output the characteristics of the Gaussian instance
+
+        Args:
+            None
+
+        Returns:
+            string: characteristics of the Gaussian
+
+        """
     
-    Returns:
-        Gaussian: Gaussian distributions
-    
-    """
-    
-    result = Gaussian()
-    result.mean = self.mean + other.mean
-    result.stdev = math.sqrt(self.stdev **2 + other.stdev **2)
-
-    return result
-
-def __repr__(self):
-    """Function to output the characteristics of the Gaussian instance
-
-    Args:
-        None
-
-    Returns:
-        string: characteristics of the Gaussian
-
-    """
-    
-    return "mean {}, standard deviation {}".format(self.mean, self.stdev)
+        return "mean {}, standard deviation {}".format(self.mean, self.stdev)

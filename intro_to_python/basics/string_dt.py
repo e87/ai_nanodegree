@@ -86,3 +86,11 @@ print(first_names)
 # Find method
 s = 'Tomorrow I am taking an exam'
 print(s.find('taking an exam'))
+
+
+# -----------------------------------------------------------------
+# string slicing
+# Reverse a string
+str = 'hello humans'
+rev_str = str[::-1]
+print(rev_str)
