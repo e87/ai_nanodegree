@@ -62,5 +62,18 @@ def factorial(n):
 
     return product
 
+
+def factorial_1(n):
+    result = 1
+    for x in range(result, n+1):
+
+        result *= x
+        print(result)
+    return result
+
+
 print(nearest_square(36))
 print(factorial(4))
+
+print("New Factorial")
+print(factorial_1(5))
