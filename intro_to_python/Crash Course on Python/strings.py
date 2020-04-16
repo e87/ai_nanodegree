@@ -60,3 +60,21 @@ def replace_domain(email, old_domain, new_domain):
 
 
 print(replace_domain("jsanc@hez@hdhwine.com", "hdhwine.com", "gmail.com"))
+animal = "Hippopotamus"
+print(animal[3:6])
+print(animal[-5])
+print(animal[10:])
+
+
+colors = ["red", "white", "blue"]
+colors.insert(2, "yellow")
+print(colors)
+
+
+def highlight_word(sentence, word):
+    return sentence.replace(word, word.upper())
+
+
+print(highlight_word("Have a nice day", "nice"))
+print(highlight_word("Shhh, don't be so loud!", "loud"))
+print(highlight_word("Automating with Python is fun", "fun"))

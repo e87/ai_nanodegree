@@ -125,3 +125,4 @@ print(replace_ending("The weather is nice in May", "may", "april"))
 # Should display "The weather is nice in May"
 print(replace_ending("The weather is nice in May", "May", "April"))
 # Should display "The weather is nice in April"
+

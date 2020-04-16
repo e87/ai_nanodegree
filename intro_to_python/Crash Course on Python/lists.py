@@ -73,3 +73,20 @@ newfilenames = [file.lower().replace(".hpp", ".h") for file in filenames]
 
 print(newfilenames)
 # Should be ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
+
+
+def combine_lists(list1, list2):
+    # Generate a new list containing the elements of list2
+    new_list = list2
+    # Using slicing to reverse a list
+    # could have use list1.reverse() method
+    new_list += list1[::-1]
+
+    # Followed by the elements of list1 in reverse order
+    return new_list
+
+
+Jamies_list = ["Alice", "Cindy", "Bobby", "Jan", "Peter"]
+Drews_list = ["Mike", "Carol", "Greg", "Marcia"]
+
+print(combine_lists(Jamies_list, Drews_list))

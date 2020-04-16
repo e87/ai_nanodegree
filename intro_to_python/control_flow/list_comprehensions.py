@@ -64,3 +64,12 @@ names = ["Rick Sanchez", "Morty Smith", "Summer Smith", "Jerry Smith", "Beth Smi
 
 first_names = [name.split()[0].lower() for name in names]
 print(first_names)
+
+
+def highlight_word(sentence, word):
+    return " ".join([w.upper() if w == word else w for w in sentence.split()])
+
+
+print(highlight_word("Have a nice day", "nice"))
+print(highlight_word("Shhh, don't be so loud!", "loud"))
+print(highlight_word("Automating with Python is fun", "fun"))
